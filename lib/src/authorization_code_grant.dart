@@ -313,7 +313,7 @@ class AuthorizationCodeGrant {
       body['client_id'] = identifier;
       if (secret != null) body['client_secret'] = secret;
     }
-
+    headers["User-Agent"] = "Traewelcross/1.5.2 (https://github.com/traewelcross/traewelcross; traewelcross.de)";
     var response =
         await _httpClient!.post(tokenEndpoint, headers: headers, body: body);
 
